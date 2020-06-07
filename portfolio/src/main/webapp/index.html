@@ -1,18 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jaya Gupta</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-  </head>
-  <body>
-    <div id="content">
-      <h1>My Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Hello</button>
-      <div id="greeting-container"></div>
-    </div>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript">
+        $(window).on('scroll', function() {
+            if($(window).scrollTop()) {
+                $('nav').addClass('black')
+            }
+            else {
+                $('nav').removeClass('black')
+            }
+        })
+    </script>
+</head>
+<body>
+    <header>
+        <div id = "home">
+                <h1>Jaya Gupta</h1>
+                <a class="btn btn-primary btn-xl js-scroll-trigger buttonarrow" href="#about"><i class="fas fa-arrow-down"></i></a>
+        </div>
+
+        <div>
+                <nav>
+                    <div class="logo"><a href="#home">JG</a></div>
+                    <div class="toggle"><i class="fa fa-bars menu" aria-hidden="true"></i></div>
+                    <ul>
+                        <!--<li><a href="#home">Home</a></li>-->
+                        <li><a class = "navbarlink" href="aboutme.html">About Me</a></li>
+                        <li><a class = "navbarlink" href="projects.html">Projects</a></li>
+                        <li><a class = "navbarlink" href="impossiblelist.html">Impossible List</a></li>
+                        <li><a class = "navbarlink" href="index.html#contact-bar">Contact</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+
+    <!-- <div class=section-light> -->
+        <section id="about" class="section section-light about">
+            <h2 class="maintitle">Hi, I'm Jaya!</h2>
+                <p class="mainparagraph">I'm an engineering student at the <a class="link" href="https://uwaterloo.ca/">University of Waterloo</a> interested in computer science. I enjoy programming, swimming, travelling, and learning new things!</p>
+                <p id="contact-bar" class="contact-bar">
+                    <a href="https://github.com/jayaguptaON" target="_blank"><i class="fab fa-github"></i><span class="tooltip">GitHub</span></a>
+                    <a href="https://www.linkedin.com/in/iamjayagupta/" target="_blank"><i class="fab fa-linkedin"></i><span class="tooltip">LinkedIn</span></a>
+                    <a href="mailto:j7gupta@edu.uwaterloo.ca" target="_blank"><i class="fas fa-envelope-open-text"></i><span class="tooltip">Email</span></a >
+                    <a href="https://www.facebook.com/jayaguptaON" target="_blank"><i class="fab fa-facebook-square"></i><span class="tooltip">Facebook</span></a >
+                    <a href="https://www.instagram.com/jayagupta__/" target="_blank"><i class="fab fa-instagram"></i><span class="tooltip">Instagram</span></a>
+                </p>
+        </section>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.menu').click(function(){
+            $('ul').toggleClass('active');
+            $('.toggle').toggleClass('active');
+            $('.tooltip').toggleClass('disappear');
+        })
+        $('.navbarlink').click(function(){
+            $('ul').toggleClass('active');
+            $('.toggle').toggleClass('active');
+        })
+        $('.logo').click(function(){
+            $('ul').removeClass('active');
+            $('.toggle').removeClass('active');
+        })
+    })
+</script>
+</body>
 </html>
