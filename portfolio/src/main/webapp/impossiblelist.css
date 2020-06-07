@@ -178,3 +178,85 @@ nav .toggle i:focus{
     outline: none;
 }
 
+@media screen and (max-width: 768px) {
+    h1 {
+        display: inline-block;
+        width: auto;
+        line-height: 15vh;
+        font-size: 15vw;
+    }
+    h2 {
+        margin-left: 1.2rem;
+    }
+    .goals {
+        display: inline-block;
+        width: auto;
+        max-width: 500px;
+    }
+    .toggle {
+        display: block;
+        margin-right: 35px;
+    }
+    nav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    nav .logo {
+        margin-left: 35px;
+    }
+    nav.black {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    nav.black ul li a{
+        color: #fff;
+    }
+    nav ul {
+        float: none;
+        display: none;
+        margin-top: 2.5em;
+        text-align: center;
+        background-color: #111;
+        width: 100%;
+        height: 100vh;
+    }
+    /* nav ul li {
+        display: block;
+        line-height: 80px;
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+    } */
+    nav ul li a {
+        display: block;
+        line-height: 80px;
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+        font-size: 15px;
+        color: #fff;
+        padding-left: 0;
+    }
+    nav ul li a:hover {
+        background-color: var(--mainColor);
+        color: #fff !important;
+    }
+    
+    .active {
+        display: block;
+    }
+    nav .toggle.active i{
+        color: var(--mainColor) !important;
+    }
+    nav .toggle i:hover{
+        color: inherit;
+    }
+    nav .logo a:hover {
+        color: inherit;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        display: inline-block;
+        width: auto;
+        line-height: 10vh;
+        font-size: 17vw;
+    }
+}
