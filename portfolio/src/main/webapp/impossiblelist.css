@@ -86,3 +86,95 @@ section{
  .link:hover{
      font-weight: bold;
  }
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 35px;
+    box-sizing: border-box;
+    transition: .3s;
+    background-color: #000;
+}
+
+/*nav.black{
+    background: rgba(0,0,0,1);
+    height: 60px;
+    padding: 10px 100px;
+}*/
+
+nav .logo{
+    float: left;
+    width: 0%;
+}
+
+nav .logo a{
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 20px;
+}
+
+nav .logo a:hover{
+    color: #06AAE9;
+}
+
+nav ul{
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    line-height: 40px;
+    color: #fff;
+    padding: 0px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+nav ul li a:last-child{
+    padding-right: 0;
+}
+
+/*nav.black ul li a{
+    color: #fff;
+}*/
+
+nav ul li a:focus {
+    outline: none;
+}
+
+nav ul li a:hover{
+    color: #06AAE9;
+}
+
+.toggle {
+    float: right;
+    display: none;
+    line-height: 40px;
+    color: #fff;
+    width: 0%;
+}
+
+nav.black .toggle {
+    color: #fff;
+}
+
+nav .toggle i:hover{
+    color: var(--mainColor);
+}
+nav .toggle i:focus{
+    color: var(--mainColor);
+    outline: none;
+}
+
