@@ -115,3 +115,192 @@ hr{
     color: #06AAE9;
 }
 
+.link{
+    background:
+    linear-gradient(
+      to bottom, var(--mainColor) 0%,
+      var(--mainColor) 100%
+    );
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 4px 4px;
+    color: #323133;
+    text-decoration: none;
+    transition: background-size .2s;
+ }
+
+ .link:focus{
+    outline: none;
+ }
+
+ .link:hover{
+    background-size: 4px 50px;
+}
+
+.contact-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.contact-bar i{
+    font-size: 40px;
+    color: #323133;
+    display: block;
+    cursor: pointer;
+}
+
+.contact-bar i:hover {
+    color: var(--mainColor)
+}
+
+.contact-bar a{
+    text-decoration: none;
+}
+
+.contact-bar span {
+    position: relative;
+    width: 120px;
+    background: #323133;
+    color: #fff;
+    padding: 0;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 8px;
+    display: block;
+    margin: 10px auto;
+    opacity: 0;
+    transition: 0.3s opacity;
+    cursor: default;
+}
+
+.contact-bar span:before {
+    content: '';
+    color: #323133;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    /* top: -16.5px; */
+    top: -6px;
+    background: #323133;
+    /* left: 45%; */
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg) translateY(12%);
+}
+
+.contact-bar a:hover > span{
+    opacity: 1;
+}
+
+/* .contact-bar i:hover{
+    color: #06AAE9;
+} */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 35px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+nav.black{
+    background: rgba(0,0,0,1);
+    height: 60px;
+    padding: 10px 35px;
+}
+
+nav .logo{
+    float: left;
+    transition: .3s;
+}
+
+nav .logo a{
+    line-height: 40px;
+    color: #111;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 20px;
+}
+
+nav.black .logo a{
+    color: #fff;
+}
+
+nav .logo a:hover{
+    color: #06AAE9;
+}
+
+nav ul{
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    line-height: 40px;
+    color: #111;
+    padding: 0px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+nav ul li a:last-child{
+    padding-right: 0;
+}
+
+nav.black ul li a{
+    color: #fff;
+}
+
+nav ul li a:focus {
+    outline: none;
+}
+
+nav ul li a:hover{
+    color: #06AAE9;
+}
+
+.toggle {
+    float: right;
+    display: none;
+    line-height: 40px;
+    color: #111;
+}
+nav.black .toggle {
+    color: #fff;
+}
+
+nav .toggle i:hover{
+    color: var(--mainColor);
+}
+nav .toggle i:focus{
+    /* color: var(--mainColor); */
+    outline: none;
+}
+
+.button{
+   text-decoration: none;
+   border: #666 2px solid;
+   border-bottom-width: 4px;
+   padding: 20px 20px;
+   justify-content: center;
+   text-align: center;
+   margin-right: 10px; 
+   color: #666;
+}
+
+.button:hover{
+    background-color: #666;
+    color: #fff;
+}
