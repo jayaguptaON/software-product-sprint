@@ -26,7 +26,6 @@
         <div id = "home">
                 <h1>Jaya Gupta</h1>
                 <!-- <button onclick="getUrlData()" style="margin: 10px; border: none; font-family: Poppins, sans-serif;">Get Data!</button> -->
-                <div id="data-container" style="margin: 10px; font-weight: bold;"></div>
                 <a class="btn btn-primary btn-xl js-scroll-trigger buttonarrow" href="#about"><i class="fas fa-arrow-down"></i></a>
         </div>
 
@@ -56,6 +55,19 @@
                     <a href="https://www.facebook.com/jayaguptaON" target="_blank"><i class="fab fa-facebook-square"></i><span class="tooltip">Facebook</span></a >
                     <a href="https://www.instagram.com/jayagupta__/" target="_blank"><i class="fab fa-instagram"></i><span class="tooltip">Instagram</span></a>
                 </p>
+        </section>
+
+        <section id="comments-section" class="section section-light about">
+            <h2 class="maintitle">Leave Your Comments Here</h2>
+            
+            <form action="/data" method="POST">
+                <label for="comment">Comments</label><br>
+                <textarea name="comment" id="comment" style="display: block; margin: 1rem;"></textarea>
+                <input type="submit" value="Submit" style="font-family: Poppins, sans-serif">
+            </form>
+            
+            <div id="data-container" style="margin: 10px; font-weight: bold;"></div>
+ 
         </section>
 
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
