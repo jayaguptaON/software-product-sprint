@@ -15,6 +15,8 @@
 
 async function getUrlData() {
   const response = await fetch('/data');
-  const urlData = await response.text();
+  const urlData = await response.json();
+//   const urlData = await response.text();
+  console.log(urlData);
   document.getElementById('data-container').innerText = urlData;
 }
