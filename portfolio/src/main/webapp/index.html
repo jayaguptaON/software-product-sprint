@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <script type="text/javascript">
         $(window).on('scroll', function() {
@@ -20,10 +21,12 @@
         })
     </script>
 </head>
-<body>
+<body onload="getUrlData()">
     <header>
         <div id = "home">
                 <h1>Jaya Gupta</h1>
+                <!-- <button onclick="getUrlData()" style="margin: 10px; border: none; font-family: Poppins, sans-serif;">Get Data!</button> -->
+                <div id="data-container" style="margin: 10px; font-weight: bold;"></div>
                 <a class="btn btn-primary btn-xl js-scroll-trigger buttonarrow" href="#about"><i class="fas fa-arrow-down"></i></a>
         </div>
 
