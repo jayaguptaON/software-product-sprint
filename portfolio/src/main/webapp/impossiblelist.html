@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Impossible List</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="impossiblelist.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(window).on('scroll', function() {
+            if($(window).scrollTop()) {
+                $('nav').addClass('black')
+            }
+            else {
+                $('nav').removeClass('black')
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+                <nav>
+                    <div class="logo"><a href="index.html#home">JG</a></div>
+                    <div class="toggle"><i tabindex="1" class="fa fa-bars menu" aria-hidden="true"></i></div>
+                    <ul>
+                        <li><a href="aboutme.html">About Me</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#" style="color:#06AAE9;">Impossible List</a></li>
+                        <li><a href="index.html#contact-bar">Contact</a></li>
+                    </ul>                    
+                </nav>
+        </div>
+    </header>
+    <section>
+    <h1 id="travelgoals">My Impossible List</h1>
+    <h2>Goals I Want to Accomplish</h2>
+    <div class="goals">
+        <h2>Travel Goals</h2>
+        <ul>
+            <li><s>New York City, NY</s> (Most recent - December 2019)</li>
+            <li><s>Orlando, FL</s> (December 2014)</li>
+            <li><s>Mumbai, India</s> (November, 2005)</li>
+            <li><s>Washington, DC</s> (July, 2011)</li>
+            <li>Banff National Park, Alberta</li>
+            <li>Los Angeles, CA</li>
+            <li>Paris, France</li>
+            <li>Marrakech, Morocco</li>
+            <li>Switzerland</li>
+            <li>Australia</li>
+            <li>Egypt</li>
+        </ul>
+    </div>
+
+    <div class="goals">
+        <h2>Professional Goals</h2>
+        <ul>
+            <li><s>Work in a molecular biology lab</s> (January 2019)</li>
+            <li><s>Work in an electrochemistry/electronics lab</s> (May 2018)</li>
+            <li>Work on cancer research</li>
+            <li><s>Get published in a journal</s> (May 2018)</li>
+            <li id="skillsgoals">Work in an industrial lab</li>
+        </ul>
+    </div>
+
+    <div class="goals">
+        <h2>Skill Goals</h2>
+        <ul>
+            <li>Become fluent in French</li>
+            <li>Become fluent in Spanish</li>
+            <li>Learn Android App Studio</li>
+            <li><strong>Develop front-end web development skills</strong>
+                <ul>
+                   <li><s>Learn HTML, CSS, JavaScript</s></li>
+                   <li>Learn ReactJS, Redux</li>
+                   <li>Improve CSS skills</li>
+                   <li>Learn advanced JavaScript</li>
+                   <li><s>Learn responsive web design</s></li>
+                   <li>Learn Ruby, Ruby on Rails</li>
+                </ul>
+            </li>
+            <li>Develop back-end programming skills</li>
+            <li><strong>Develop data science/machine learning skills</strong>
+                <ul>
+                    <li>Learn advanced Python</li>
+                    <li>Try data science with R</li>
+                    <li>Learn SQL</li>
+                    <li>Get a good foundation in AI/machine learning theory</li>
+                    <li>Learn deep learning with PyTorch, TensorFlow</li>
+                    <li>Learn OpenCV</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="goals">
+        <h2>Project Goals</h2>
+        <ul>
+            <li>An app that helps students pay off student loans using their banking/tuition data</li>
+            <li><s>Make this website more responsive</s></li>
+        </ul>
+    </div>
+
+    <div class="goals">
+        <h2>Events to Attend</h2>
+        <ul>
+            <li><s>Attend my first hackathon</s> (January 2019)</li>
+            <li>Grace Hopper Conference</li>
+            <li>Hack the North</li>
+        </ul>
+    </div>
+    </section>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu').click(function(){
+                $('ul').toggleClass('active');
+                $('.toggle').toggleClass('active');
+            })
+        })
+    </script>
+</body>
+</html>

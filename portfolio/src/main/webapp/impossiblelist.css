@@ -1,0 +1,262 @@
+:root {
+    --mainColor: #06aae9;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #323232;
+    scroll-behavior: smooth;
+}
+
+h1{
+    /*background-color: #fff;*/
+    color: #323232;
+    font-size: 70px;
+    padding: 35px;
+    text-transform: capitalize;
+    margin-top: 7rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-weight: lighter;
+    line-height: 0.5em;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.goals{
+    width: 46%;
+    text-align: left;
+}
+
+.goals ul{
+    list-style: none;
+    padding-left: 23px;
+    font-size: 20px;
+}
+
+.goals li{
+    margin-top: 0.5em;
+}
+
+.goals ul li::before{
+    content: "\2022";
+    color: #06AAE9;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    font-size: 20px;
+}
+
+.button{
+    text-decoration: none;
+    border: #666 1px solid;
+    padding: 20px 20px;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 1rem; 
+    color: #666;
+    width: 25%;
+ }
+ 
+ .button:hover{
+     background-color: #666;
+     color: #fff;
+ }
+
+ .link{
+     text-decoration: none;
+     color: #06AAE9;
+ }
+
+ .link:focus{
+    outline: none;
+ }
+
+ .link:hover{
+     font-weight: bold;
+ }
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 35px;
+    box-sizing: border-box;
+    transition: .3s;
+    background-color: #000;
+}
+
+/*nav.black{
+    background: rgba(0,0,0,1);
+    height: 60px;
+    padding: 10px 100px;
+}*/
+
+nav .logo{
+    float: left;
+    width: 0%;
+}
+
+nav .logo a{
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+    font-size: 20px;
+}
+
+nav .logo a:hover{
+    color: #06AAE9;
+}
+
+nav ul{
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    line-height: 40px;
+    color: #fff;
+    padding: 0px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+nav ul li a:last-child{
+    padding-right: 0;
+}
+
+/*nav.black ul li a{
+    color: #fff;
+}*/
+
+nav ul li a:focus {
+    outline: none;
+}
+
+nav ul li a:hover{
+    color: #06AAE9;
+}
+
+.toggle {
+    float: right;
+    display: none;
+    line-height: 40px;
+    color: #fff;
+    width: 0%;
+}
+
+nav.black .toggle {
+    color: #fff;
+}
+
+nav .toggle i:hover{
+    color: var(--mainColor);
+}
+nav .toggle i:focus{
+    color: var(--mainColor);
+    outline: none;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        display: inline-block;
+        width: auto;
+        line-height: 15vh;
+        font-size: 15vw;
+    }
+    h2 {
+        margin-left: 1.2rem;
+    }
+    .goals {
+        display: inline-block;
+        width: auto;
+        max-width: 500px;
+    }
+    .toggle {
+        display: block;
+        margin-right: 35px;
+    }
+    nav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    nav .logo {
+        margin-left: 35px;
+    }
+    nav.black {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    nav.black ul li a{
+        color: #fff;
+    }
+    nav ul {
+        float: none;
+        display: none;
+        margin-top: 2.5em;
+        text-align: center;
+        background-color: #111;
+        width: 100%;
+        height: 100vh;
+    }
+    /* nav ul li {
+        display: block;
+        line-height: 80px;
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+    } */
+    nav ul li a {
+        display: block;
+        line-height: 80px;
+        border-bottom: 1px solid rgba(0,0,0,0.5);
+        font-size: 15px;
+        color: #fff;
+        padding-left: 0;
+    }
+    nav ul li a:hover {
+        background-color: var(--mainColor);
+        color: #fff !important;
+    }
+    
+    .active {
+        display: block;
+    }
+    nav .toggle.active i{
+        color: var(--mainColor) !important;
+    }
+    nav .toggle i:hover{
+        color: inherit;
+    }
+    nav .logo a:hover {
+        color: inherit;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        display: inline-block;
+        width: auto;
+        line-height: 10vh;
+        font-size: 17vw;
+    }
+}

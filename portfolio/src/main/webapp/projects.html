@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jaya Gupta</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+    <link href="projects.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(window).on('scroll', function() {
+            if($(window).scrollTop()) {
+                $('nav').addClass('black')
+            }
+            else {
+                $('nav').removeClass('black')
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+                <nav>
+                    <div class="logo"><a href="index.html#home">JG</a></div>
+                    <div class="toggle"><i tabindex="1" class="fa fa-bars menu" aria-hidden="true"></i></div>
+                    <ul>
+                        <li><a href="aboutme.html">About Me</a></li>
+                        <li><a href="#" style="color:#06AAE9;">Projects</a></li>
+                        <li><a href="impossiblelist.html">Impossible List</a></li>
+                        <li><a href="index.html#contact-bar">Contact</a></li>
+                    </ul>                    
+                </nav>
+        </div>
+    </header>
+    <section>
+        <h1>Projects</h1>
+
+        <div id="smarthire">
+            <h2 class="text">SmartHire - March 2019</h2>
+            <img class = "smarthire" src="images/smarthire.jpg">
+            <p class="text">SmartHire is a hiring web-app that uses AI to eliminate bias in the hiring process. It analyzes hiring documents (eg. resumes, cover letters) to make recommendations about the top candidates to consider from a pool of applicants.</p>
+            <ul class="text">
+                <li>Built with <strong>Python, HTML, CSS, JavaScript</strong></li>
+                <li>Used IBM's Natural Language Understanding APIs and open source model Word2Vec to evaluate the 'distance' (i.e. similarity) between candidates' qualifications and job requirements</li>
+                <li>Implemented post-processing method using IBM's AI Fairness 360 library to examine and mitigate bias in the model</li>
+            </ul>
+            <p class="text">See more: <a class="link" href="https://devpost.com/software/techtogether-1d37zi" target="_blank">Devpost</a class="link"> / <a class="link"  href="https://github.com/jayaguptaON/techtogetherboston" target="_blank">GitHub</a class="link"></p>
+        </div>
+
+        <div id="meelia">
+            <h2 class="text">MeeLia - March 2019</h2>
+            <p class="text">MeeLia is a voice assistant geared towards helping young people, especially women, with mental health issues. It performs sentiment analysis of users' speech using machine learning to meaningfully converse with those experiencing mental health crisis.</p>
+            <ul class="text">
+                <li>Built with <strong>Python, HTML, CSS, and Bootstrap</strong></li>
+                <li>Trained model using Google Cloud Natural Language API and DialogFlow</li>
+            </ul>
+            <p class="text">See more: <a class="link" href="https://devpost.com/software/meelia-voice-assistant-with-sentiment-analysis" target="_blank">Devpost</a class="link"> / <a class="link" href="https://github.com/jayaguptaON/MeeLia" target="_blank">GitHub</a class="link"></p>
+        </div>
+
+        <div id="envirokids">
+            <h2 class="text">EnviroKids - February 2019</h2>
+            <p class="text">EnviroKids is a web-app containing a suite of games designed to educate kids about environmental issues and eco-friendly activities they can carry out on their own.</p>
+            <ul class="text">
+                <li>Built with <strong>HTML, CSS, Bootstrap, and jQuery</strong></li>
+            </ul>
+            <p class="text">See more: <a class="link" href="https://devpost.com/software/envirokids-152o3g" target="_blank">Devpost</a> / <a class="link" href="https://github.com/jayaguptaON/EnviroKids" target="_blank">GitHub</a class="link"></p>
+        </div>    
+    </section>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.menu').click(function(){
+                $('ul').toggleClass('active');
+                $('.toggle').toggleClass('active');
+            })
+        })
+    </script>
+</body>
+</html>
