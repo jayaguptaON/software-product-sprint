@@ -208,8 +208,13 @@ async function getUrlData() {
     var australia = {lat: -25.2744, lng:133.7751};
     var egypt = {lat: 26.8206, lng:30.8025};
 
+    var contentString = '<p><b>My favourite city!</b>';
+    var infowindow = new google.maps.InfoWindow({
+    content: contentString
+    });
+
     //Places I have visited
-    var marker = new google.maps.Marker({position: newyorkcity, icon: {url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}, map: map, title: 'New York City - my favourite city'});
+    var nyc = new google.maps.Marker({position: newyorkcity, icon: {url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}, map: map, title: 'New York City - my favourite city'});
     var marker = new google.maps.Marker({position: orlando, icon: {url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}, map: map, title: 'Orlando, FL, USA'});
     var marker = new google.maps.Marker({position: mumbai, icon: {url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}, map: map, title: 'Mumbai, India'});
     var marker = new google.maps.Marker({position: dc, icon: {url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png"}, map: map, title: 'Washington, DC, USA'});
@@ -222,4 +227,8 @@ async function getUrlData() {
     var marker = new google.maps.Marker({position: switzerland, icon: {url: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png"}, map: map, title: 'Switzerland'});
     var marker = new google.maps.Marker({position: australia, icon: {url: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png"}, map: map, title: 'Australia'});
     var marker = new google.maps.Marker({position: egypt, icon: {url: "http://maps.google.com/mapfiles/ms/icons/purple-dot.png"}, map: map, title: 'Egypt'});
+
+    nyc.addListener('click', function() {
+        infowindow.open(map, nyc);
+    });
 }
