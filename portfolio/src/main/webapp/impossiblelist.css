@@ -12,6 +12,7 @@ body, html {
     scroll-behavior: smooth;
 }
 
+
 h1{
     /*background-color: #fff;*/
     color: #323232;
@@ -176,6 +177,11 @@ nav .toggle i:hover{
 nav .toggle i:focus{
     color: var(--mainColor);
     outline: none;
+}
+
+#map {
+  height: 300px !important;
+  width: 100% !important;
 }
 
 @media screen and (max-width: 768px) {
