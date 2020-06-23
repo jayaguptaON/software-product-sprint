@@ -21,7 +21,7 @@
     </script>
 </head>
 
-<body>
+<body onload="createMap();">
     <header>
         <div class="wrapper">
                 <nav>
@@ -41,6 +41,7 @@
     <h2>Goals I Want to Accomplish</h2>
     <div class="goals">
         <h2>Travel Goals</h2>
+        <div id="map"></div>
         <ul>
             <li><s>New York City, NY</s> (Most recent - December 2019)</li>
             <li><s>Orlando, FL</s> (December 2014)</li>
@@ -55,7 +56,7 @@
             <li>Egypt</li>
         </ul>
     </div>
-
+    
     <div class="goals">
         <h2>Professional Goals</h2>
         <ul>
@@ -123,5 +124,7 @@
             })
         })
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqAPBFTdWzG4OhY31VCZQPAd3Hw944jcw"></script>
+    <script src="script.js"></script>
 </body>
 </html>
