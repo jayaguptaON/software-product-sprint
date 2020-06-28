@@ -14,10 +14,52 @@
 
 package com.google.sps;
 
+import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 public final class FindMeetingQuery {
   public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
-    throw new UnsupportedOperationException("TODO: Implement this method.");
+    Collection<String> meetingattendees = request.getAttendees();
+    long meetingduration = request.getDuration();
+    ArrayList<TimeRange> busytimes = new ArrayList<TimeRange>();
+    ArrayList<TimeRange> freetimes = new ArrayList<TimeRange>();
+
+    if (meetingduration > TimeRange.WHOLE_DAY.duration()) {
+        return freetimes;
+    }
+
+    for (Event e : events){
+        Collection<String> busypeople = e.getAttendees();
+        for (String busyperson : busypeople) {
+            for (String meetingperson : meetingattendees) {
+                if (busyperson == meetingperson) {
+                    busytimes.add(e.getWhen());
+                }
+            }
+        }    
+    }
+
+    boolean emptycheck = busytimes.isEmpty();
+    if (emptycheck == true) {
+        freetimes.add(TimeRange.WHOLE_DAY);
+        return freetimes;
+    }
+
+    Collections.sort(busytimes, TimeRange.ORDER_BY_START);
+    
+    for (int i = 0; i < busytimes.size(); i++) {
+        int start1 = (busytimes.get(i)).end();
+        int end1 = (busytimes.get(i+1)).start();
+        TimeRange newtimeslot = TimeRange.fromStartEnd(start1, end1, false);    
+        int newtimeslotDuration = newtimeslot.duration();
+        if (newtimeslotDuration > meetingduration) {
+            freetimes.add(newtimeslot);
+        }
+    }
+    return freetimes;
   }
 }
